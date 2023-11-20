@@ -2,11 +2,12 @@ import { auth } from "../../firebase";
 import { GoogleAuthProvider, signInWithPopup } from "firebase/auth";
 import { useState, useEffect } from "react";
 import "./styles/Login.css";
+import {useNavigate} from "react-router-dom";
 
 function Login() {
     const [USER_DATA, SET_USER_DATA] : any= useState();
     const [disabled, setDisable] = useState(false);
-
+    const navigate = useNavigate();
     // useEffect(() => {
     //     if(userData){
     //         setDisable(true);
@@ -17,6 +18,7 @@ function Login() {
         signInWithPopup(auth, provider) // 팝업창 띄워서 로그인
             .then((data) => {
                 SET_USER_DATA(data.user); // user data 설정
+                navigate("/");
                 console.log(data); // console에 UserCredentialImpl 출력
             })
             .catch((err) => {
@@ -26,7 +28,7 @@ function Login() {
 
     return (
         <div className="login_form" id="LOGIN-FORM">
-            <h3>구글 로그인 테스트</h3>
+            <br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
                   <input type="email" placeholder="이메일을 입력해주세요."/> <br /><br />
                   <input type="password" placeholder="비밀번호를 입력해주세요."/>
             <br /><br />

@@ -1,0 +1,25 @@
+.gallery_wrap {
+    display: flex;
+    margin: 0 auto;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.gallery_wrap img {
+    height: 200px;
+    margin: 50px;
+    border-radius: 5px;
+}
+
+img:hover {
+    cursor: pointer;
+    animation: image_sacle 1s forwards;
+}
+
+@keyframes image_sacle {
+    0%{
+    }
+    100%{
+        transform: scale(1.4);
+    }
+}

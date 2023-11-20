@@ -1,0 +1,106 @@
+.game_wrap {
+    height: 200px;
+}
+.game_genre {
+    max-width: 200px;
+    height: 200px;
+    float: left;
+}
+
+.game_genre > ul > p > li {
+    list-style: none;
+}
+
+.game_genre > ul > p > li > a {
+    text-decoration: none;
+    color: black;
+}
+
+.game_genre > ul > p > li > a:hover {
+    color: rgba(0,0,0, 0.7);
+}
+
+.game_section {
+    width: calc(100% - 200px);
+    float: right;
+    display: flex;
+    flex-wrap: wrap;
+    background-color: black;
+    justify-content: center;
+}
+
+.game_zone {
+    min-width: 250px;
+    height: 250px;
+    border-radius: 25px;
+    border: 1px solid white;
+    color: white;
+    display: flex;
+    flex-wrap: wrap;
+    margin: 50px;
+}
+
+.game_info {
+    min-width: 250px;
+    color: white;
+    margin-left: 50px;
+}
+
+/*.game_wrap {*/
+/*    width: 100px;*/
+/*    height: 100px;*/
+/*    background-color: black;*/
+/*    border-radius: 50px;*/
+/*}*/
+
+/*.radius_right {*/
+/*    width: 150px;*/
+/*    height: 1000px;*/
+/*    background-color: green;*/
+/*}*/
+
+/*.triangle{*/
+/*    width: 100px;*/
+/*    height: 100px;*/
+/*    rotate: -300deg;*/
+/*    margin-left: 1200px;*/
+/*    border-radius: 120px;*/
+/*    border-bottom: 200px solid red;*/
+/*    border-left: 200px solid transparent;*/
+/*    border-right: 200px solid transparent;*/
+/*}*/
+
+/*.spiral {*/
+/*    position: absolute;*/
+/*    top: 50%;*/
+/*    left: 50%;*/
+/*    transform: translate(-50%, -50%);*/
+/*    width: 1px; !* 시작 지점의 선의 두께 *!*/
+/*    height: 1px; !* 시작 지점의 선의 높이 *!*/
+/*    border: 1px solid #333; !* 시작 지점의 선 색상 *!*/
+/*    animation: spiral-animation 5s linear;*/
+/*}*/
+
+/*@keyframes spiral-animation {*/
+/*    0% {*/
+/*        width: 1px;*/
+/*        height: 1px;*/
+/*    }*/
+/*    100% {*/
+/*        width: 300px; !* 나선형의 최종 지점의 선의 두께 *!*/
+/*        height: 300px; !* 나선형의 최종 지점의 선의 높이 *!*/
+/*        transform: translate(-50%, -50%) rotate(720deg); !* 회전 각도 *!*/
+/*    }*/
+/*}*/
+
+/*.radius_right {*/
+/*    width: 80px;*/
+/*    height: 400px;*/
+/*    rotate: 330deg;*/
+/*    margin-bottom: 200px;*/
+/*    border-radius: 70px;*/
+/*    background-color: green;*/
+/*    margin-left: 1300px;*/
+/*    position: absolute;*/
+/*    z-index: 99;*/
+/*}*/

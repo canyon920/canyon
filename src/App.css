@@ -1,6 +1,6 @@
 .logo {
   margin: 0 1rem;
-  font-size: 2rem;
+  font-size: 10px;
 }
 
 .header__menulist {
@@ -35,4 +35,68 @@ li {
   display: none;
   font-size: 1.5rem;
   padding: 1rem 1rem;
+}
+
+
+/* Mount & UnMount Effect Animations */
+.loaded{
+  animation: 0.4s ease load forwards;
+}
+.unloaded{
+  animation: 0.4s ease unload forwards;
+}
+@keyframes load{
+  0%{
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100%{
+    opacity: 1;
+    transform: translateY(0px);
+  }
+}
+@keyframes unload{
+  0%{
+    opacity: 1;
+    transform: translateY(0px);
+  }
+  100%{
+    opacity: 0;
+    transform: translateY(20px);
+  }
+}
+
+.wrap{
+  opacity: 0;
+}
+
+.home, .page1, .page2, .page3{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 500px;
+  font-size: 2rem;
+}
+
+.home{ background: rgb(86, 152, 238); }
+.page1{ background: #b67e7e; }
+.page2{ background: rgb(77, 77, 77); }
+.page3{ background: rgb(199, 255, 199); }
+
+.nav{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.nav>li{
+  display: inline-block;
+  padding: 0 1em;
+}
+.nav>li>button{
+  border: none;
+  background: none;
+  outline: 0;
+  cursor: pointer;
+  font-size: 1rem;
 }

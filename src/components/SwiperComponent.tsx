@@ -12,27 +12,36 @@ import './styles.css';
 import { Pagination } from 'swiper/modules';
 
 export default function SwiperComponent() {
-    const [BULLET, SET_BULLET] = useState(["HOME", "CONTEXT", "JOIN US", "CONTEXT US"]);
+    const [bullet, set_bullet] = useState(["HOME", "CONTEXT", "JOIN US", "CONTEXT US"]);
+    const [modal, setModal] = useState(false);
+    const experience = () => {
+        setModal(!modal);
+    }
+    const profile = "/ones/ones.jpg"
     return (
         <>
             <Swiper
                 pagination={{
                     clickable:true,
-                    // dynamicBULLETs: true,
-                    renderBULLET: function (index: number, className: string) {
-                        return '<button class="' + className + '">' + (BULLET[index])  + "</button>";
+                    dynamicBULLETs: true,
+                    renderBullet: function (index: number, className: string) {
+                        return '<button class="' + className + '">' + (bullet[index])  + "</button>";
                     },
                 }}
                 modules={[Pagination]}
                 className="mySwiper"
             >
                 <SwiperSlide>
-                    <section>
-                      <div>
-                        <h3> PROFILE </h3>
-                          <p> <br /> 풍부한 경험을 갖고 있는 프론트엔드 개발자 김동원 입니다.</p>
+                      <div style={{display:"flex", lineHeight: "20px"}}>
+                          <img src={profile} alt="나" className="profile_wrap"/>
+                          <p style={{margin:"70px "}}> 즐기는 사람은 <br /> 이길 수 없다고 생각해요 :) </p>
                       </div>
-                    </section>
+                </SwiperSlide>
+                <SwiperSlide>
+                        <div>
+                            <p>의류 편집숍 웹 디자니에서부터 서울 우수 기업 상장의 UI/UX 디자이너에서부터 대기업 API 자동화 선행 개발과 <br />
+                              게임 생성 스토리 자동 생성 솔루션 구현을 경험 해봤어요.</p>
+                        </div>
                 </SwiperSlide>
                 <SwiperSlide>
                     <section>

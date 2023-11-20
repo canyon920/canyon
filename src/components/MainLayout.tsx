@@ -1,7 +1,6 @@
 function MainLayout(){
     return (
         <section>
-            <div> Hello World</div>
         </section>
     )
 }
