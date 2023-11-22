@@ -5,6 +5,7 @@ import Home from "./pages/Home"
 import PlayUs from "./pages/GameUs"
 import Login from "./pages/User/Login"
 import SignUp from "./pages/User/SignUp"
+import Tetris from "./pages/Games/Tetris/Tetris"
 import {auth} from "./firebase"
 
 import {
@@ -34,7 +35,7 @@ export default function App(){
 
     return (
         <div>
-                <HeaderMain />
+            <HeaderMain />
             <div ref={wrapRef} className="wrap loaded">
                 <Routes>
                     <Route path="/" element={<Home/> } />
@@ -43,6 +44,7 @@ export default function App(){
                     <Route path="/register" element={<SignUp /> } />
                     <Route path="/mbti" element={<MbtiChat /> } />
                     <Route path="/gallery" element={<Gallery /> } />
+                    <Route path="/tetris" element={<Tetris /> } />
                 </Routes>
                 <MainLayout/>
             </div>
